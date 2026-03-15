@@ -26,10 +26,8 @@ app.layout = html.Div([
 
     html.Div([
 
-        # Левый — таблица данных
         html.Div(id='data-panel', style={**PANEL_STYLE, 'width': 'fit-content'}),
 
-        # Правый — ввод X и Y
         html.Div([
             html.Div('Отправить на бэкенд', style={
                 'fontWeight': 'bold',
@@ -87,7 +85,7 @@ app.layout = html.Div([
 
     WebSocket(id='ws', url=WEBSOCKET_URL),
 
-    dcc.Interval(id='graph-update', interval=3000, n_intervals=0),
+    dcc.Interval(id='graph-update', interval=1000, n_intervals=0),
 ])
 
 

@@ -1,5 +1,3 @@
-# styles.py
-
 INPUT_STYLE = {
     'width': '100%',
     'padding': '6px 10px',
