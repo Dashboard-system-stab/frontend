@@ -7,9 +7,9 @@ import plotly.graph_objs as go
 import json
 from dash_extensions import WebSocket
 from styles import INPUT_STYLE, BUTTON_STYLE, PANEL_STYLE
+import os
 
-WEBSOCKET_URL = "ws://localhost:8765"
-
+WEBSOCKET_URL = os.environ.get("WEBSOCKET_URL", "ws://backend:8765")
 app = dash.Dash(__name__)
 
 server_state = {
@@ -227,4 +227,4 @@ def create_minimal_panel(dates, temps):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8050, debug=True)
