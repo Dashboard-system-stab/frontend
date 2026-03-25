@@ -5,10 +5,7 @@ import pandas as pd
 import plotly.graph_objs as go
 from dash import dcc, html, no_update
 from dash.dependencies import Output, Input, State
-from dash_extensions import WebSocket
 from styles import INPUT_STYLE, BUTTON_STYLE, PANEL_STYLE
-
-WEBSOCKET_URL = "ws://localhost:8765"
 
 server_state = {
     'dates': [],

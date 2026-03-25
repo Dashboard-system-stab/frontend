@@ -4,8 +4,6 @@ from dash import dcc, html, no_update, ctx
 from dash.dependencies import Output, Input, State
 from styles import BUTTON_STYLE, PANEL_STYLE
 
-IVAN_WS_URL = "ws://localhost:7777"
-
 # ---------- Лейаут ----------
 editor_layout = html.Div([
 
